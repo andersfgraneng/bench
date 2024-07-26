@@ -11,6 +11,9 @@ echo "cmd+shift+left and cmd+shift+right to move apps to left and right of the s
 defaults write -globalDomain NSUserKeyEquivalents -dict-add "Move Window to Left Side of Screen" "@$\\U2190"
 defaults write -globalDomain NSUserKeyEquivalents -dict-add "Move Window to Right Side of Screen" "@$\\U2192"
 
+echo "Adjust mouse speed to 6.0"
+defaults write -g com.apple.mouse.scaling 6.0
+
 # Check if Homebrew is installed
 command -v brew >/dev/null 2>&1 || { \
 	echo >&2 "Installing Homebrew Now"; \
@@ -34,5 +37,5 @@ brew_cask_check_if_installed () {
 
 brew install git
 brew install --cask iTerm2
-
-
+brew install tmux
+brew install fd
