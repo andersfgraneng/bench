@@ -39,3 +39,4 @@ brew install git
 brew install --cask iTerm2
 brew install tmux
 brew install fd
+brew install neovim
