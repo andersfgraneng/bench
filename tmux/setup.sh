@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 if [[ ! -d "$HOME/.tmux" ]]; then
   git clone https://github.com/gpakosz/.tmux.git "$HOME/.tmux"
