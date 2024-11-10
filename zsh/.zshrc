@@ -128,3 +128,4 @@ export SDKMAN_DIR="/Users/andersgraneng/.sdkman"
 export PATH="$PATH:/Users/andersgraneng/.local/bin"
 export PATH="$PATH:/Users/andersgraneng/nvim-macos/bin"
 
+bindkey -v
