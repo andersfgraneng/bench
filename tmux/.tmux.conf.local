@@ -77,7 +77,7 @@ tmux_conf_24b_colour=auto
 #   - tmux_conf_theme_mouse
 #   - tmux_conf_theme_root
 #   - tmux_conf_theme_synchronized
-tmux_conf_theme=enabled
+tmux_conf_theme=disabled
 
 # default theme
 tmux_conf_theme_colour_1="#080808"    # dark gray
@@ -425,11 +425,11 @@ tmux_conf_uninstall_plugins_on_reload=true
 # to enable a plugin, use the 'set -g @plugin' syntax:
 # visit https://github.com/tmux-plugins for available plugins
 #set -g @plugin 'tmux-plugins/tmux-copycat'
-#set -g @plugin 'tmux-plugins/tmux-cpu'
+set -g @plugin 'tmux-plugins/tmux-cpu'
 #set -g @plugin 'tmux-plugins/tmux-resurrect'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
-
+#tset -g @plugin 'omerxx/tmux-sessionx'
 
 # -- custom variables ----------------------------------------------------------
 
@@ -457,3 +457,40 @@ tmux_conf_uninstall_plugins_on_reload=true
 #
 # "$@"
 # # /!\ do not remove the previous line
+
+set-option -g default-terminal 'screen-256color'
+set-option -g terminal-overrides ',xterm-256color:RGB'
+
+set -g status-right-length 100
+set -g status-left-length 100
+set -g status-left ""
+set -g status-right "#{E:@catppuccin_status_application}"
+set -agF status-right "#{E:@catppuccin_status_cpu}"
+set -ag status-right "#{E:@catppuccin_status_session}"
+set -ag status-right "#{E:@catppuccin_status_uptime}"
+set -agF status-right "#{E:@catppuccin_status_battery}"
+
+set -g status-position top
+set -g set-clipboard on
+set -g default-terminal "${TERM}"
+set -g pane-active-border-style 'fg=magenta,bg=default'
+set -g pane-border-style 'fg=brightblack,bg=default'
+
+# Catpuccin theme
+set -g @catppuccin_flavor 'macchiato'
+set -g @catppuccin_window_status_style "rounded"
+
+set -g @catppuccin_window_number_position "right"
+set -g @catppuccin_window_default_fill "number"
+set -g @catppuccin_window_default_text "#W"
+set -g @catppuccin_window_current_fill "number"
+set -g @catppuccin_window_current_text "#W#{?window_zoomed_flag,(),}"
+set -g @catppuccin_status_modules_right "directory date_time"
+set -g @catppuccin_status_modules_left "session"
+set -g @catppuccin_directory_text "#{b:pane_current_path}"
+set -g @catppuccin_date_time_text "%H:%M"
+
+set -g base-index 1
+set -g renumber-windows on
+
+run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
