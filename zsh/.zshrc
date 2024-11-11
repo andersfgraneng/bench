@@ -71,15 +71,8 @@ ZSH_THEME=""
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffffff,bold,underline"
 
 source $ZSH/oh-my-zsh.sh
-
-# oh-my-zsh overrides the prompt, so Pure must be activated after `source $ZSH/oh-my-zsh.sh`
-# .zshrc
-fpath+=($HOME/.zsh/pure)
-autoload -U promptinit; promptinit
-prompt pure
 
 # User configuration
 
@@ -129,3 +122,23 @@ export PATH="$PATH:/Users/andersgraneng/.local/bin"
 export PATH="$PATH:/Users/andersgraneng/nvim-macos/bin"
 
 bindkey -v
+
+# oh-my-zsh overrides the prompt, so Pure must be activated after `source $ZSH/oh-my-zsh.sh`
+# .zshrc
+fpath+=($HOME/.zsh/pure)
+autoload -U promptinit; promptinit
+prompt pure
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffffff,bold,underline"
+
+# Add highlight style for command flags (-f|--flag).
+# named color values: red,green,blue,yellow,cyan,magenta,white,black
+# See here for more highlighting options 
+# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md
+# Catppuccin colors: https://github.com/catppuccin/catppuccin
+ZSH_HIGHLIGHT_STYLES[command]=fg=#c6a0f6 #Mauve
+ZSH_HIGHLIGHT_STYLES[builtin]=fg=#c6a0f6 #Mauve
+ZSH_HIGHLIGHT_STYLES[alias]=fg=#c6a0f6 #Mauve
+ZSH_HIGHLIGHT_STYLES[global-alias]=fg=#c6a0f6 #Mauve
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=#939ab7 #Overlay2
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=#939ab7 #Overlay2
