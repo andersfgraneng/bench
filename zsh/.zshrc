@@ -142,3 +142,4 @@ ZSH_HIGHLIGHT_STYLES[alias]=fg=#c6a0f6 #Mauve
 ZSH_HIGHLIGHT_STYLES[global-alias]=fg=#c6a0f6 #Mauve
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=#939ab7 #Overlay2
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=#939ab7 #Overlay2
+ZSH_HIGHLIGHT_STYLES[path]=fg=#a6da95 #Green
