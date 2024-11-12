@@ -2,11 +2,19 @@
 
 echo "\nSetup zsh\n----------"
 # Remember to import https://github.com/sindresorhus/iterm2-snazzy for colors
+# or https://github.com/catppuccin/iterm
 if [[ ! -d "$HOME/.zsh/pure" ]]; then
   mkdir -p "$HOME/.zsh"
   git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 else
   echo "Pure already installed."
+fi
+
+# Install oh my zsh
+if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+  echo "oh-my-zsh already installed."
 fi
 
 if [[ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]]; then
