@@ -100,14 +100,20 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Enable vim-bindings in terminal
+bindkey -v
+
 export HOMEBREW_NO_ANALYTICS=1
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PATH:/Users/andersgraneng/.pyenv/bin"
+export PATH="$PATH:/Users/andersgraneng/.poetry/bin"
+export PATH="$PATH:/Users/andersgraneng/.local/bin" # pipx
+export PATH="$PATH:/Users/andersgraneng/nvim-macos/bin"
+export PATH="$PATH:/Users/andersgraneng/.tmux/plugins/tmuxifier/bin"
+
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-
-export PATH="$HOME/.poetry/bin:$PATH"
+eval "$(tmuxifier init -)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -116,12 +122,6 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/andersgraneng/.sdkman"
 [[ -s "/Users/andersgraneng/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/andersgraneng/.sdkman/bin/sdkman-init.sh"
-
-# Created by `pipx` on 2021-11-27 10:52:13
-export PATH="$PATH:/Users/andersgraneng/.local/bin"
-export PATH="$PATH:/Users/andersgraneng/nvim-macos/bin"
-
-bindkey -v
 
 # oh-my-zsh overrides the prompt, so Pure must be activated after `source $ZSH/oh-my-zsh.sh`
 # .zshrc
