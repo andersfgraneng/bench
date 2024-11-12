@@ -24,7 +24,7 @@ else
 fi
 
 if [[ ! -f "$HOME/.zshrc" ]]; then
-  ln -s "${0:a:h}/.zshrc" "${HOME}/.zshrc"
+  ln -s "${0:a:h}/.zshrc" "$HOME/.zshrc"
   echo "Creating symlink for ~/.zshrc"
 else
   echo "~/.zshrc already exists."
