@@ -38,11 +38,7 @@ brew_cask_check_if_installed () {
 brew install git
 brew install --cask iTerm2
 brew install tmux
+brew install tmuxinator
 brew install fd
 brew install neovim
 brew install fzf
-
-# Install oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-
