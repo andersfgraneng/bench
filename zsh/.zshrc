@@ -103,6 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # Enable vim-bindings in terminal
 bindkey -v
 
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+
 export HOMEBREW_NO_ANALYTICS=1
 
 export PATH="$PATH:/Users/andersgraneng/.pyenv/bin"
@@ -114,6 +117,8 @@ export PATH="$PATH:/Users/andersgraneng/.tmux/plugins/tmuxifier/bin"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(tmuxifier init -)"
+
+export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux/tmuxifier/layouts"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

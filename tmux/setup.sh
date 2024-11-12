@@ -8,8 +8,17 @@ else
 fi
 
 if [[ ! -f "$HOME/.tmux.conf" ]]; then
-  ln -s "${0:a:h}/.tmux.conf" "${HOME}/.tmux.conf"
+  ln -s "${0:a:h}/.tmux.conf" "$HOME/.tmux.conf"
   echo "Creating symlink for ~/.tmux.conf"
 else
   echo "~/.tmux.conf already exists."
 fi
+
+if [[ ! -d "$HOME/.tmux/tmuxifier/layouts" ]]; then
+  mkdir -p "$HOME/.tmux/tmuxifier"
+  ln -s "${0:a:h}/tmuxifier/layouts" "$HOME/.tmux/tmuxifier/layouts"
+  echo "Creating symlink for ~/.tmux/tmuxifier/layouts"
+else
+  echo "~/.tmux/tmuxifier/layouts already exists."
+fi
+
