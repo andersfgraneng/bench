@@ -2,7 +2,7 @@
 
 echo "\nSetup aerospace\n----------"
 
-if [[ ! -f "$HOME/.tmux.conf" ]]; then
+if [[ ! -f "$HOME/.aerospace.toml" ]]; then
   ln -s "${0:a:h}/.aerospace.toml" "$HOME/.aerospace.toml"
   echo "Creating symlink for ~/.aerospace.toml"
 else

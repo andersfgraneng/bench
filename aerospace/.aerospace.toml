@@ -114,6 +114,7 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+# In your config, you can drop workspace bindings that you don't need
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
@@ -123,7 +124,7 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-#alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+#alt-a = 'workspace A' ignor this so alt-a works for norwegian character aa 
 alt-b = 'workspace B'
 alt-c = 'workspace C'
 alt-d = 'workspace D'
@@ -133,7 +134,7 @@ alt-g = 'workspace G'
 alt-i = 'workspace I'
 alt-m = 'workspace M'
 alt-n = 'workspace N'
-alt-o = 'workspace O'
+#alt-o = 'workspace O' ignore this so alt-o works for norwegian character oe.
 alt-p = 'workspace P'
 alt-q = 'workspace Q'
 alt-r = 'workspace R'
