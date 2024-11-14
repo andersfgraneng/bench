@@ -42,6 +42,7 @@ brew install stow
 brew install fd
 brew install jq
 brew install bat
+brew install tree
 brew install fzf
 brew install --cask iTerm2
 brew install --cask nikitabobko/tap/aerospace
