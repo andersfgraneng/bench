@@ -37,8 +37,11 @@ brew_cask_check_if_installed () {
 
 brew install git
 brew install tmux
-brew install fd
 brew install neovim
+brew install stow
+brew install fd
+brew install jq
+brew install bat
 brew install fzf
 brew install --cask iTerm2
 brew install --cask nikitabobko/tap/aerospace
