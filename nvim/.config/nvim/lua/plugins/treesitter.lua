@@ -18,6 +18,8 @@ return {
           "kotlin",
           "rust",
           "angular",
+          "json",
+          "yaml",
         },
         sync_install = false,
         highlight = { enable = true },
