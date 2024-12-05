@@ -46,5 +46,6 @@ brew install tree
 brew install fzf
 brew install --cask iTerm2
 brew install --cask nikitabobko/tap/aerospace
+brew install --cask arc
 brew tap FelixKratz/formulae
 brew install borders
