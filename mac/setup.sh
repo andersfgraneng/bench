@@ -39,6 +39,7 @@ brew install git
 brew install tmux
 brew install neovim
 brew install stow
+brew install openconnect
 brew install fd
 brew install jq
 brew install bat
