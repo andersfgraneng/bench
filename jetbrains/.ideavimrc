@@ -1,0 +1,31 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+""" map <leader>d <Action>(Debug)
+""" map <leader>r <Action>(RenameElement)
+""" map <leader>c <Action>(Stop)
+""" map <leader>z <Action>(ToggleDistractionFreeMode)
+
+""" map <leader>s <Action>(SelectInProjectView)
+""" map <leader>a <Action>(Annotate)
+""" map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+""" map <S-Space> <Action>(GotoNextError)
+
+""" map <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>o <Action>(FileStructurePopup)
+nmap <leader>gf <Action>(ReformatCode)
+nmap <leader>gr <Action>(FindUsages)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>ff <Action>(GotoFile)
+nmap <leader>fb <Action>(RecentChangedFiles)
+nmap <leader>ca <Action>(ShowIntentionActions)
+nmap <c-n> <Action>(ActivateProjectToolWindow)
+
+nmap <leader>q <Action>(HideActiveWindow)
