@@ -8,3 +8,4 @@ stow aerospace
 stow nvim
 stow tmux
 stow zsh
+stow jetbrains
