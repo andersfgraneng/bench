@@ -14,6 +14,9 @@ defaults write -globalDomain NSUserKeyEquivalents -dict-add "Move Window to Righ
 echo "Adjust mouse speed to 6.0"
 defaults write -g com.apple.mouse.scaling 6.0
 
+echo "Allow holding key/ disable holding for accented character"
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Check if Homebrew is installed
 command -v brew >/dev/null 2>&1 || { \
 	echo >&2 "Installing Homebrew Now"; \
