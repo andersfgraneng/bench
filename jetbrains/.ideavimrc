@@ -19,12 +19,14 @@ set idearefactormode=keep
 
 """ map <leader>b <Action>(ToggleLineBreakpoint)
 nmap <leader>o <Action>(FileStructurePopup)
+nmap <leader>p <Action>(SearchEverywhere)
 nmap <leader>gf <Action>(ReformatCode)
 nmap <leader>gr <Action>(FindUsages)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gd <Action>(GotoDeclaration)
 nmap <leader>ff <Action>(GotoFile)
 nmap <leader>fb <Action>(RecentChangedFiles)
+nmap <leader>fg <Action>(FindInPath)
 nmap <leader>ca <Action>(ShowIntentionActions)
 nmap <c-n> <Action>(ActivateProjectToolWindow)
 
