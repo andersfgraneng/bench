@@ -41,6 +41,7 @@ brew_cask_check_if_installed () {
 brew install git
 brew install tmux
 brew install neovim
+brew install hurl
 brew install stow
 brew install openconnect
 brew install fd
