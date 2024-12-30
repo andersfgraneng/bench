@@ -5,6 +5,7 @@
 ./zsh/setup.sh
 
 stow aerospace
+stow ghostty
 stow nvim
 stow tmux
 stow zsh
