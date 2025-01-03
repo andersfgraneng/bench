@@ -53,5 +53,6 @@ brew install --cask iTerm2
 brew install --cask ghostty
 brew install --cask nikitabobko/tap/aerospace
 brew install --cask arc
+brew install --cask chatgpt
 brew tap FelixKratz/formulae
 brew install borders
