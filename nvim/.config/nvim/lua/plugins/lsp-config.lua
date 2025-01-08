@@ -17,6 +17,7 @@ return {
 					"tailwindcss",
 					"vacuum",
 					"jdtls",
+          "terraformls"
 				},
 			})
 		end,
@@ -45,6 +46,9 @@ return {
 			lspconfig.jdtls.setup({
 				capabilities = capabilities,
 			})
+      lspconfig.terraformls.setup({
+        capabilities = capabilities,
+      })
 
 			local util = require("lspconfig.util")
 			lspconfig.angularls.setup({
