@@ -20,6 +20,8 @@ return {
           "angular",
           "json",
           "yaml",
+          "terraform",
+          "hcl"
         },
         sync_install = false,
         highlight = { enable = true },
