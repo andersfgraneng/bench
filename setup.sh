@@ -1,12 +1,15 @@
 # Run setup for all modules
 
-./mac/setup.sh
+if [[ "$OSTYPE" == "darwin*" ]]; then
+  ./mac/setup.sh
+  stow aerospace
+  stow ghostty
+  stow jetbrains
+fi
+
 ./tmux/setup.sh
 ./zsh/setup.sh
 
-stow aerospace
-stow ghostty
 stow nvim
 stow tmux
 stow zsh
-stow jetbrains
