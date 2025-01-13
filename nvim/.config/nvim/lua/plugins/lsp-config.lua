@@ -17,7 +17,8 @@ return {
 					"tailwindcss",
 					"vacuum",
 					"jdtls",
-          "terraformls"
+          "terraformls",
+          "gopls"
 				},
 			})
 		end,
@@ -47,6 +48,9 @@ return {
 				capabilities = capabilities,
 			})
       lspconfig.terraformls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.gopls.setup({
         capabilities = capabilities,
       })
 
