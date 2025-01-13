@@ -7,7 +7,6 @@ return {
 
       configs.setup({
         ensure_installed = {
-          "c",
           "lua",
           "vim",
           "vimdoc",
@@ -15,13 +14,13 @@ return {
           "typescript",
           "html",
           "java",
-          "kotlin",
           "rust",
           "angular",
           "json",
           "yaml",
           "terraform",
-          "hcl"
+          "hcl",
+          "go"
         },
         sync_install = false,
         highlight = { enable = true },
