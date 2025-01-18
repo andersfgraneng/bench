@@ -20,7 +20,8 @@ return {
           "yaml",
           "terraform",
           "hcl",
-          "go"
+          "go",
+          "dockerfile"
         },
         sync_install = false,
         highlight = { enable = true },
