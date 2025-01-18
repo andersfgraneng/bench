@@ -1,6 +1,7 @@
 # Run setup for all modules
 
-if [[ "$OSTYPE" == "darwin*" ]]; then
+if [[ "$OSTYPE" =~ darwin* ]]; then
+  echo "OS is: $OSTYPE"
   ./mac/setup.sh
   stow aerospace
   stow ghostty
