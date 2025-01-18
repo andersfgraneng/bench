@@ -18,7 +18,8 @@ return {
 					"vacuum",
 					"jdtls",
           "terraformls",
-          "gopls"
+          "gopls",
+          "dockerls"
 				},
 			})
 		end,
@@ -51,6 +52,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.gopls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.dockerls.setup({
         capabilities = capabilities,
       })
 
