@@ -56,3 +56,5 @@ brew install --cask arc
 brew install --cask chatgpt
 brew tap FelixKratz/formulae
 brew install borders
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
