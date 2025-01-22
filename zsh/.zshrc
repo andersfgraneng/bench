@@ -106,6 +106,10 @@ bindkey -v
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 
+if [[ -f ~/.zsh_aliases ]]; then
+  source ~/.zsh_aliases
+fi
+
 export HOMEBREW_NO_ANALYTICS=1
 
 export PATH="$PATH:/Users/andersgraneng/.pyenv/bin"
