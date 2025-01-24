@@ -10,16 +10,16 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-          -- general programming languages/tools
+					-- general programming languages/tools
 					"jdtls",
 					"rust_analyzer",
-          "gopls",
+					"gopls",
 					"lua_ls",
 					"vacuum",
-          -- build/infrastructure tools
-          "terraformls",
-          "dockerls",
-          -- frontend tools/languages/frameworks
+					-- build/infrastructure tools
+					"terraformls",
+					"dockerls",
+					-- frontend tools/languages/frameworks
 					"ts_ls",
 					"angularls",
 					"tailwindcss",
@@ -33,16 +33,16 @@ return {
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      -- general programming languages/tools
+			-- general programming languages/tools
 			lspconfig.jdtls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
-      lspconfig.gopls.setup({
-        capabilities = capabilities,
-      })
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
@@ -50,17 +50,35 @@ return {
 				capabilities = capabilities,
 			})
 
-      -- build/infrastructure tools
-      lspconfig.terraformls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.dockerls.setup({
-        capabilities = capabilities,
-      })
+			-- build/infrastructure tools
+			lspconfig.terraformls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.dockerls.setup({
+				capabilities = capabilities,
+			})
 
-        -- frontend tools/languages/frameworks
+			-- frontend tools/languages/frameworks
+			-- for ts remember you need to:
+			-- npm install -g typescript typescript-language-server
+			-- to support vue you also need:
+			-- npm install -g @vue/typescript-plugin
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
+				init_options = {
+					plugins = {
+						{
+							name = "@vue/typescript-plugin",
+							location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+							languages = { "javascript", "typescript", "vue" },
+						},
+					},
+				},
+				filetypes = {
+					"javascript",
+					"typescript",
+					"vue",
+				},
 			})
 			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
