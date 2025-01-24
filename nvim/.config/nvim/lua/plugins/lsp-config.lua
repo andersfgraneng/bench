@@ -10,16 +10,19 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"lua_ls",
+          -- general programming languages/tools
+					"jdtls",
 					"rust_analyzer",
+          "gopls",
+					"lua_ls",
+					"vacuum",
+          -- build/infrastructure tools
+          "terraformls",
+          "dockerls",
+          -- frontend tools/languages/frameworks
 					"ts_ls",
 					"angularls",
 					"tailwindcss",
-					"vacuum",
-					"jdtls",
-          "terraformls",
-          "gopls",
-          "dockerls"
 				},
 			})
 		end,
@@ -30,34 +33,38 @@ return {
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.ts_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.tailwindcss.setup({
+      -- general programming languages/tools
+			lspconfig.jdtls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
+      lspconfig.gopls.setup({
+        capabilities = capabilities,
+      })
+			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.vacuum.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.jdtls.setup({
-				capabilities = capabilities,
-			})
+
+      -- build/infrastructure tools
       lspconfig.terraformls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.gopls.setup({
         capabilities = capabilities,
       })
       lspconfig.dockerls.setup({
         capabilities = capabilities,
       })
 
+        -- frontend tools/languages/frameworks
+			lspconfig.ts_ls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.tailwindcss.setup({
+				capabilities = capabilities,
+			})
 			local util = require("lspconfig.util")
 			lspconfig.angularls.setup({
 				capabilities = capabilities,
