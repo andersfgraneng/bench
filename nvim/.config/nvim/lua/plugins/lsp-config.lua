@@ -2,7 +2,7 @@ return {
 	{
 		"williamboman/mason.nvim",
 		config = function()
-			require("mason").setup({ ensure_installed = { "java-debug-adapter", "java-test" } })
+			require("mason").setup()
 		end,
 	},
 	{
@@ -34,9 +34,6 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			-- general programming languages/tools
-			lspconfig.jdtls.setup({
-				capabilities = capabilities,
-			})
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
@@ -69,7 +66,7 @@ return {
 					plugins = {
 						{
 							name = "@vue/typescript-plugin",
-							location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+							location = "~/.nvm/versions/node/v22.13.1/lib/node_modules/@vue/typescript-plugin",
 							languages = { "javascript", "typescript", "vue" },
 						},
 					},
