@@ -22,6 +22,7 @@ return {
 					-- frontend tools/languages/frameworks
 					"ts_ls",
 					"angularls",
+          "volar",
 					"tailwindcss",
 				},
 			})
@@ -66,8 +67,8 @@ return {
 					plugins = {
 						{
 							name = "@vue/typescript-plugin",
-							location = "~/.nvm/versions/node/v22.13.1/lib/node_modules/@vue/typescript-plugin",
-							languages = { "javascript", "typescript", "vue" },
+              location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+							languages = { "vue" },
 						},
 					},
 				},
@@ -77,6 +78,9 @@ return {
 					"vue",
 				},
 			})
+      lspconfig.volar.setup({
+				capabilities = capabilities,
+      })
 			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
 			})
