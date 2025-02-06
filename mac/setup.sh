@@ -50,7 +50,6 @@ brew install bat
 brew install tree
 brew install fzf
 brew install ripgrep
-brew install jdtls
 brew install --cask iTerm2
 brew install --cask ghostty
 brew install --cask nikitabobko/tap/aerospace
