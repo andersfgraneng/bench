@@ -9,6 +9,7 @@ return {
 		local dap = require("dap")
 		local dapui = require("dapui")
 
+    require("dapui").setup()
 		require("dap-lldb").setup()
 
 		dap.listeners.before.attach.dapui_config = function()
