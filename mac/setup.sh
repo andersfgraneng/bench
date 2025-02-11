@@ -56,6 +56,7 @@ brew install --cask nikitabobko/tap/aerospace
 brew install --cask arc
 brew install --cask chatgpt
 brew install --cask obsidian
+brew install --cask raycast
 brew tap FelixKratz/formulae
 brew install borders
 brew tap hashicorp/tap
