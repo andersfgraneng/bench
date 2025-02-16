@@ -18,6 +18,7 @@ return {
 					"vacuum",
 					-- build/infrastructure tools
 					"terraformls",
+          "tflint",
 					"dockerls",
 					-- frontend tools/languages/frameworks
 					"ts_ls",
@@ -51,6 +52,17 @@ return {
 			-- build/infrastructure tools
 			lspconfig.terraformls.setup({
 				capabilities = capabilities,
+        filetypes = {
+          "tf",
+          "terraform"
+        }
+			})
+			lspconfig.tflint.setup({
+				capabilities = capabilities,
+        filetypes = {
+          "tf",
+          "terraform"
+        }
 			})
 			lspconfig.dockerls.setup({
 				capabilities = capabilities,
