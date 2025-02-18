@@ -22,3 +22,7 @@ if [[ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]]; then
 else
   echo "zsh-syntax-highlighting already installed."
 fi
+
+if [[ -f ~/.zshrc ]]; then
+    rm ~/.zshrc
+fi
