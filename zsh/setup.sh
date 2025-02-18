@@ -1,14 +1,6 @@
 #!/usr/bin/env zsh
 
 echo "\nSetup zsh\n----------"
-# Remember to import https://github.com/sindresorhus/iterm2-snazzy for colors
-# or https://github.com/catppuccin/iterm
-if [[ ! -d "$HOME/.zsh/pure" ]]; then
-  mkdir -p "$HOME/.zsh"
-  git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-else
-  echo "Pure already installed."
-fi
 
 # Install oh my zsh
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
