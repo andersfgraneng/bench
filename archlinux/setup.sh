@@ -26,6 +26,13 @@ sudo pacman -S --noconfirm --needed zsh
 sudo pacman -S --noconfirm --needed which
 sudo pacman -S --noconfirm --needed openssh
 
+#Build dependencies for: python w pyenv
+sudo pacman -S --noconfirm --needed base-devel openssl zlib xz tk
+
+if [[ ! -d "$HOME/.pyenv" ]]; then
+    curl -fsSL https://pyenv.run | bash
+fi
+
 if [[ "$SHELL" != "/usr/bin/zsh" ]]; then
   chsh -s /usr/bin/zsh
 fi
