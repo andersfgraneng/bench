@@ -21,5 +21,6 @@ fi
 ./zsh/setup.sh
 
 stow nvim
+stow starship
 stow tmux
 stow zsh
