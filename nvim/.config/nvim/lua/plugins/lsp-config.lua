@@ -16,6 +16,7 @@ return {
 					"gopls",
 					"lua_ls",
 					"vacuum",
+                    "taplo",
 					-- build/infrastructure tools
 					"terraformls",
           "tflint",
@@ -46,6 +47,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.vacuum.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.taplo.setup({
 				capabilities = capabilities,
 			})
 
