@@ -23,6 +23,13 @@ else
   echo "zsh-syntax-highlighting already installed."
 fi
 
+
+if [[ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+else
+  echo "zsh-autosuggestions already installed."
+fi
+
 if [[ -f "$HOME/.zshrc" ]]; then
     rm ~/.zshrc
 fi
