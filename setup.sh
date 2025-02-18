@@ -24,3 +24,10 @@ stow nvim
 stow starship
 stow tmux
 stow zsh
+
+echo "Install tpm plugins"
+bash "$HOME/.tmux/plugins/tpm/bin/install_plugins"
+
+if [[ "$SHELL" != "/usr/bin/zsh" ]]; then
+    source "$HOME/.zshrc"
+fi
