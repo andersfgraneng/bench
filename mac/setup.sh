@@ -37,6 +37,7 @@ brew_cask_check_if_installed () {
 	fi
 }
 
+brew update
 
 brew install git
 brew install tmux
@@ -51,6 +52,7 @@ brew install bat
 brew install tree
 brew install fzf
 brew install ripgrep
+brew install pyenv
 brew install --cask iTerm2
 brew install --cask ghostty
 brew install --cask nikitabobko/tap/aerospace
