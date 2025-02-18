@@ -120,7 +120,6 @@ export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-eval "$(tmuxifier init -)"
 eval "$(starship init zsh)"
 
 export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux/tmuxifier/layouts"
