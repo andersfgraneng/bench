@@ -66,6 +66,10 @@ brew install borders
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 
+# sdkman needs zip and unzip, ensures latest versions
+brew install zip
+brew install unzip
+
 # install programming languages tooling
 
 brew install go
