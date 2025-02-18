@@ -39,6 +39,12 @@ else
     echo "sdkman already installed."
 fi
 
+if [[ ! -d "$HOME/.nvm" ]]; then
+    PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash'
+else
+    echo "nvm already installed."
+fi
+
 if [[ ! -d "$HOME/.pyenv" ]]; then
     curl -fsSL https://pyenv.run | bash
 else
