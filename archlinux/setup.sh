@@ -34,6 +34,7 @@ echo "Checking if Rust is installed"
 if [[ ! -d "$HOME/.cargo" ]];then
     echo "Rust is not installed, installing..."
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    source "$HOME/.cargo/env"
 else
     echo "Rust is installed."
 fi
