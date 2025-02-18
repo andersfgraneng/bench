@@ -30,7 +30,8 @@ sudo pacman -S --noconfirm --needed openssh
 sudo pacman -S --noconfirm --needed base-devel openssl zlib xz tk
 
 # install programming languages tooling
-sudo pacman -S --noconfirm --needed rust
+sudo pacman -S --noconfirm --needed go
+sudo pacman -S --noconfirm --needed rustup
 
 if [[ ! -d "$HOME/.pyenv" ]]; then
     curl -fsSL https://pyenv.run | bash
