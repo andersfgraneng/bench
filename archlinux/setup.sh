@@ -7,6 +7,7 @@ sudo pacman -Syu
 
 sudo pacman -S --noconfirm --needed tmux
 sudo pacman -S --noconfirm --needed neovim
+sudo pacman -S --noconfirm --needed starship
 sudo pacman -S --noconfirm --needed hurl
 sudo pacman -S --noconfirm --needed stow
 sudo pacman -S --noconfirm --needed openconnect
