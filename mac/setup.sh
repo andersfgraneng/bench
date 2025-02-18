@@ -70,3 +70,11 @@ brew install hashicorp/tap/terraform
 
 brew install go
 brew install rust
+
+if [[ ! -f "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
+    curl -s "https://get.sdkman.io" | bash
+fi
+
+if [[ ! -d "$HOME/.pyenv" ]]; then
+    curl -fsSL https://pyenv.run | bash
+fi
