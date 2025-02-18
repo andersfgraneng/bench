@@ -121,6 +121,7 @@ export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(tmuxifier init -)"
+eval "$(starship init zsh)"
 
 export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux/tmuxifier/layouts"
 
@@ -132,11 +133,6 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="/Users/$HOME/.sdkman"
 [[ -s "/Users/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$HOME/.sdkman/bin/sdkman-init.sh"
 
-# oh-my-zsh overrides the prompt, so Pure must be activated after `source $ZSH/oh-my-zsh.sh`
-# .zshrc
-fpath+=($HOME/.zsh/pure)
-autoload -U promptinit; promptinit
-prompt pure
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffffff,bold,underline"
 
