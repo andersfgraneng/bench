@@ -26,9 +26,9 @@ sudo pacman -S --noconfirm --needed zsh
 sudo pacman -S --noconfirm --needed which
 sudo pacman -S --noconfirm --needed openssh
 
-#Build dependencies for: python w pyenv, sdkman needs unzip
+#Build dependencies for: python w pyenv, sdkman needs unzip and zip
 sudo pacman -S --noconfirm --needed base-devel openssl zlib xz tk
-sudo pacman -S --noconfirm --needed unzip
+sudo pacman -S --noconfirm --needed unzip zip
 
 # install programming languages tooling
 sudo pacman -S --noconfirm --needed go
