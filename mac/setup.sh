@@ -73,8 +73,12 @@ brew install rust
 
 if [[ ! -f "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
     curl -s "https://get.sdkman.io" | bash
+else
+    echo "sdkman already installed."
 fi
 
 if [[ ! -d "$HOME/.pyenv" ]]; then
     curl -fsSL https://pyenv.run | bash
+else
+    echo "pyenv already installed."
 fi
