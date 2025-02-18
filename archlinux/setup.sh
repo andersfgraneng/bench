@@ -33,6 +33,10 @@ sudo pacman -S --noconfirm --needed base-devel openssl zlib xz tk
 sudo pacman -S --noconfirm --needed go
 sudo pacman -S --noconfirm --needed rustup
 
+if [[ ! -f "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
+    curl -s "https://get.sdkman.io" | bash
+fi
+
 if [[ ! -d "$HOME/.pyenv" ]]; then
     curl -fsSL https://pyenv.run | bash
 fi
