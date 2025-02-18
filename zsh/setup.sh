@@ -23,6 +23,6 @@ else
   echo "zsh-syntax-highlighting already installed."
 fi
 
-if [[ -f ~/.zshrc ]]; then
+if [[ -f "$HOME/.zshrc" ]]; then
     rm ~/.zshrc
 fi
