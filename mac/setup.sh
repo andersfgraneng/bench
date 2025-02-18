@@ -67,6 +67,9 @@ brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 
 # install programming languages tooling
+
+brew install go
+
 echo "Checking if Rust is installed"
 if [[ ! -d "$HOME/.cargo" ]];then
     echo "Rust is not installed, installing..."
