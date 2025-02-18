@@ -65,3 +65,12 @@ brew tap FelixKratz/formulae
 brew install borders
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
+
+# install programming languages tooling
+echo "Checking if Rust is installed"
+if [[ ! -d "$HOME/.cargo" ]];then
+    echo "Rust is not installed, installing..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+else
+    echo "Rust is installed."
+fi
