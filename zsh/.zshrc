@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/andersgraneng/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -72,7 +72,7 @@ ZSH_THEME=""
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 # User configuration
 
@@ -112,11 +112,11 @@ fi
 
 export HOMEBREW_NO_ANALYTICS=1
 
-export PATH="$PATH:/Users/andersgraneng/.pyenv/bin"
-export PATH="$PATH:/Users/andersgraneng/.poetry/bin"
-export PATH="$PATH:/Users/andersgraneng/.local/bin" # pipx
-export PATH="$PATH:/Users/andersgraneng/nvim-macos/bin"
-export PATH="$PATH:/Users/andersgraneng/.tmux/plugins/tmuxifier/bin"
+export PATH="$PATH:$HOME/.pyenv/bin"
+export PATH="$PATH:$HOME/.poetry/bin"
+export PATH="$PATH:$HOME/.local/bin" # pipx
+export PATH="$PATH:$HOME/nvim-macos/bin"
+export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
@@ -129,8 +129,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/andersgraneng/.sdkman"
-[[ -s "/Users/andersgraneng/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/andersgraneng/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/$HOME/.sdkman"
+[[ -s "/Users/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$HOME/.sdkman/bin/sdkman-init.sh"
 
 # oh-my-zsh overrides the prompt, so Pure must be activated after `source $ZSH/oh-my-zsh.sh`
 # .zshrc
