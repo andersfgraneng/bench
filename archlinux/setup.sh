@@ -21,7 +21,7 @@ sudo pacman -S --noconfirm --needed terraform
 
 #Shell
 sudo pacman -S --noconfirm --needed git
-sudo pacman -S --noconfirm --needed sudo man-db less
+sudo pacman -S --noconfirm --needed sudo man-db less vi vim
 sudo pacman -S --noconfirm --needed zsh
 sudo pacman -S --noconfirm --needed which
 sudo pacman -S --noconfirm --needed openssh
