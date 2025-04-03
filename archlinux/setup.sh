@@ -29,6 +29,7 @@ sudo pacman -S --noconfirm --needed openssh
 #Build dependencies for: python w pyenv, sdkman needs unzip and zip
 sudo pacman -S --noconfirm --needed base-devel openssl zlib xz tk
 sudo pacman -S --noconfirm --needed unzip zip
+sudo pacman -S --noconfirm --needed wget
 
 # install programming languages tooling
 sudo pacman -S --noconfirm --needed go
@@ -55,3 +56,14 @@ fi
 if [[ "$SHELL" != "/usr/bin/zsh" ]]; then
   chsh -s /usr/bin/zsh
 fi
+
+# Add 1password
+
+ARCH="amd64" && \
+wget "https://cache.agilebits.com/dist/1P/op2/pkg/v2.30.3/op_linux_${ARCH}_v2.30.3.zip" -O op.zip && \
+unzip -d op op.zip && \
+sudo mv op/op /usr/local/bin/ && \
+rm -r op.zip op && \
+sudo groupadd -f onepassword-cli && \
+sudo chgrp onepassword-cli /usr/local/bin/op && \
+sudo chmod g+s /usr/local/bin/op
