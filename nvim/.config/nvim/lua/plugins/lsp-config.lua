@@ -24,6 +24,7 @@ return {
 					"gh-actions-language-server",
 					-- frontend tools/languages/frameworks
 					"ts_ls",
+                    "astro",
 					"angularls",
 					"volar",
 					"tailwindcss",
@@ -99,6 +100,9 @@ return {
 					"typescriptreact",
 					"vue",
 				},
+			})
+			lspconfig.astro.setup({
+				capabilities = capabilities,
 			})
 			lspconfig.volar.setup({
 				capabilities = capabilities,
