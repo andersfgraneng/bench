@@ -16,15 +16,16 @@ return {
 					"gopls",
 					"lua_ls",
 					"vacuum",
-                    "taplo",
+					"taplo",
 					-- build/infrastructure tools
 					"terraformls",
-          "tflint",
+					"tflint",
 					"dockerls",
+					"gh-actions-language-server",
 					-- frontend tools/languages/frameworks
 					"ts_ls",
 					"angularls",
-          "volar",
+					"volar",
 					"tailwindcss",
 				},
 			})
@@ -56,19 +57,22 @@ return {
 			-- build/infrastructure tools
 			lspconfig.terraformls.setup({
 				capabilities = capabilities,
-        filetypes = {
-          "tf",
-          "terraform"
-        }
+				filetypes = {
+					"tf",
+					"terraform",
+				},
 			})
 			lspconfig.tflint.setup({
 				capabilities = capabilities,
-        filetypes = {
-          "tf",
-          "terraform"
-        }
+				filetypes = {
+					"tf",
+					"terraform",
+				},
 			})
 			lspconfig.dockerls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.gh_actions_ls.setup({
 				capabilities = capabilities,
 			})
 
@@ -83,7 +87,8 @@ return {
 					plugins = {
 						{
 							name = "@vue/typescript-plugin",
-              location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+							location = vim.fn.stdpath("data")
+								.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
 							languages = { "vue" },
 						},
 					},
@@ -91,13 +96,13 @@ return {
 				filetypes = {
 					"javascript",
 					"typescript",
-                    "typescriptreact",
+					"typescriptreact",
 					"vue",
 				},
 			})
-      lspconfig.volar.setup({
+			lspconfig.volar.setup({
 				capabilities = capabilities,
-      })
+			})
 			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
 			})
