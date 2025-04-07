@@ -3,7 +3,7 @@ return {
 	event = "VeryLazy",
 	config = function()
 		require("chatgpt").setup({
-			api_key_cmd = "op read op://api_keys/openapi/credential",
+			api_key_cmd = "op read op://api_keys/openai/credential",
 		})
 	end,
 	dependencies = {
