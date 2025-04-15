@@ -24,10 +24,11 @@ return {
 					"gh-actions-language-server",
 					-- frontend tools/languages/frameworks
 					"ts_ls",
-                    "astro",
+					"astro",
 					"angularls",
 					"volar",
 					"tailwindcss",
+					"html",
 				},
 			})
 		end,
@@ -110,6 +111,15 @@ return {
 			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.html.setup({
+				capabilities = capabilities,
+				filetypes = {
+					"html",
+					"typescript",
+					"astro",
+				},
+			})
+
 			local util = require("lspconfig.util")
 			lspconfig.angularls.setup({
 				capabilities = capabilities,
