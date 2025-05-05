@@ -53,6 +53,7 @@ brew install tree
 brew install fzf
 brew install ripgrep
 brew install pyenv
+brew install colima
 brew install --cask iTerm2
 brew install --cask ghostty
 brew install --cask nikitabobko/tap/aerospace
@@ -61,7 +62,6 @@ brew install --cask chatgpt
 brew install --cask obsidian
 brew install --cask raycast
 brew install --cask discord
-brew install --cask docker
 brew install --cask google-cloud-sdk
 brew tap FelixKratz/formulae
 brew install borders
