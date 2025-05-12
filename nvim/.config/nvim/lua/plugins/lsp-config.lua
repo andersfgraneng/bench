@@ -15,6 +15,7 @@ return {
 					"rust_analyzer",
 					"gopls",
 					"lua_ls",
+                    "pyright", -- python
 					"vacuum",
 					"taplo",
 					-- build/infrastructure tools
@@ -47,6 +48,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.vacuum.setup({
