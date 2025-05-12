@@ -17,6 +17,7 @@ return {
 					"angular",
 					"java",
 					"rust",
+                    "python",
 					"json",
 					"yaml",
 					"terraform",

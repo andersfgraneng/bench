@@ -10,7 +10,10 @@ return {
 			sources = {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
+				require("none-ls.formatting.ruff"),
+
 				require("none-ls.diagnostics.eslint"),
+				require("none-ls.diagnostics.ruff"),
 			},
 		})
 
