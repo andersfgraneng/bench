@@ -1,62 +1,62 @@
-local mason = require 'mason-registry'
-local jdtls_path = mason.get_package('jdtls'):get_install_path()
-local java_debug_path =
-    mason.get_package('java-debug-adapter'):get_install_path()
-local java_test_path = mason.get_package('java-test'):get_install_path()
-
-local equinox_launcher_path =
-    vim.fn.glob(jdtls_path .. '/plugins/org.eclipse.equinox.launcher_*.jar')
-
-local system = 'linux'
-if vim.fn.has 'win32' then
-    system = 'win'
-elseif vim.fn.has 'mac' then
-    system = 'mac'
+local system = "linux"
+if vim.fn.has("win32") then
+    system = "win"
+elseif vim.fn.has("mac") then
+    system = "mac"
 end
-local config_path = vim.fn.glob(jdtls_path .. '/config_' .. system)
 
-local lombok_path = jdtls_path .. '/lombok.jar'
+local home = os.getenv("HOME")
+local jdtls_path = home .. "/.local/share/nvim/mason/packages/jdtls"
+local workspace_dir = home .. "/.cache/jdtls/" .. vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+local equinox_path = vim.fn.glob(jdtls_path .. "/plugins/org.eclipse.equinox.launcher_*.jar")
 
-local jdtls = require 'jdtls'
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-local config = {
+require("jdtls").start_or_attach({
     cmd = {
-        vim.fn.expand '~/.sdkman/candidates/java/21.*-amzn/bin/java', -- or '/path/to/java17_or_newer/bin/java'
+        -- 💀
+        "java", -- or '/path/to/java21_or_newer/bin/java'
 
-        '-Declipse.application=org.eclipse.jdt.ls.core.id1',
-        '-Dosgi.bundles.defaultStartLevel=4',
-        '-Declipse.product=org.eclipse.jdt.ls.core.product',
-        '-Dlog.protocol=true',
-        '-Dlog.level=ALL',
-        '-Xmx1g',
-        '--add-modules=ALL-SYSTEM',
-        '--add-opens',
-        'java.base/java.util=ALL-UNNAMED',
-        '--add-opens',
-        'java.base/java.lang=ALL-UNNAMED',
+        "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+        "-Dosgi.bundles.defaultStartLevel=4",
+        "-Declipse.product=org.eclipse.jdt.ls.core.product",
+        "-Dlog.protocol=true",
+        "-Dlog.level=ALL",
+        "-Xmx1g",
+        "--add-modules=ALL-SYSTEM",
+        "--add-opens",
+        "java.base/java.util=ALL-UNNAMED",
+        "--add-opens",
+        "java.base/java.lang=ALL-UNNAMED",
 
-        '-javaagent:' .. lombok_path,
+        -- 💀
+        "-jar",
+        equinox_path,
 
-        '-jar',
-        equinox_launcher_path,
+        -- 💀
+        "-configuration",
+        jdtls_path .. "/config_" .. system,
 
-        '-configuration',
-        config_path,
-
-        '-data',
-        vim.fn.stdpath 'cache'
-            .. '/jdtls/'
-            .. vim.fn.fnamemodify(vim.fn.getcwd(), ':t'),
+        -- 💀
+        -- See `data directory configuration` section in the README
+        "-data",
+        workspace_dir,
     },
 
-    root_dir = vim.fs.root(0, { 'mvnw', 'gradlew' }),
+    -- 💀
+    -- This is the default if not provided, you can remove it. Or adjust as needed.
+    -- One dedicated LSP server & client will be started per unique root_dir
+    --
+    -- vim.fs.root requires Neovim 0.10.
+    -- If you're using an earlier version, use: require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}),
+    root_dir = vim.fs.root(0, { ".git", "mvnw", "gradlew", "build.xml" }),
 
     -- Here you can configure eclipse.jdt.ls specific settings
     -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
     -- for a list of options
     settings = {
         java = {
-            server = { launchMode = 'Hybrid' },
+            server = { launchMode = "Hybrid" },
             eclipse = {
                 downloadSources = true,
             },
@@ -74,7 +74,7 @@ local config = {
             },
             inlayHints = {
                 parameterNames = {
-                    enabled = 'none',
+                    enabled = "none",
                 },
             },
             signatureHelp = {
@@ -92,23 +92,19 @@ local config = {
         },
         redhat = { telemetry = { enabled = false } },
     },
-}
 
-local bundles = {
-    vim.fn.glob(
-        java_debug_path
-            .. '/extension/server/com.microsoft.java.debug.plugin-*.jar'
-    ),
-}
-
-vim.list_extend(
-    bundles,
-    vim.split(vim.fn.glob(java_test_path .. '/extension/server/*.jar'), '\n')
-)
-
-config['init_options'] = {
-    bundles = bundles,
-}
-
-jdtls.start_or_attach(config)
-
+    -- Language server `initializationOptions`
+    -- You need to extend the `bundles` with paths to jar files
+    -- if you want to use additional eclipse.jdt.ls plugins.
+    --
+    -- See https://github.com/mfussenegger/nvim-jdtls#java-debug-installation
+    --
+    -- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
+    init_options = {
+        bundles = vim.split(
+            vim.fn.glob("$HOME/.local/share/nvim/mason/packages/java-*/extension/server/*.jar", true),
+            "\n"
+        ),
+    },
+    capabilities = capabilities,
+})
