@@ -53,6 +53,9 @@ brew install tree
 brew install fzf
 brew install ripgrep
 brew install pyenv
+brew install docker
+brew install docker-compose
+brew install docker-credential-helper
 brew install colima
 brew install --cask iTerm2
 brew install --cask ghostty
