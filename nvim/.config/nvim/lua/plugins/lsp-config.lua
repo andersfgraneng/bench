@@ -27,7 +27,7 @@ return {
 					"ts_ls",
 					"astro",
 					"angularls",
-					"volar",
+                    "vue_ls",
 					"tailwindcss",
 					"html",
 				},
@@ -107,9 +107,6 @@ return {
 				},
 			})
 			lspconfig.astro.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.volar.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.tailwindcss.setup({
