@@ -12,6 +12,13 @@ return {
 
 			vim.keymap.set("n", "<leader>gc", builtin.commands, { desc = "Telescope commands" })
 			vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Telescope git status" })
+			vim.keymap.set("n", "<leader>gl", builtin.git_commits, { desc = "Telescope git log" })
+			vim.keymap.set("n", "<leader>gb", builtin.git_branches, { desc = "Telescope git branches" })
+
+
+			vim.keymap.set("n", "<leader>gr", builtin.lsp_references, { desc = "Telescope lsp list references" })
+			vim.keymap.set("n", "<leader>gi", builtin.lsp_implementations, { desc = "Telescope Goto the implementation of the word under the cursor if there's only one, otherwise show all options in Telescope" })
+			vim.keymap.set("n", "<leader>gd", builtin.lsp_definitions, { desc = "Telescope Goto the definition of the word under the cursor, if there's only one, otherwise show all options in Telescope" })
 		end,
 	},
 	{
