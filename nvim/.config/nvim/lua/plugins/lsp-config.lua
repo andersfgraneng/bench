@@ -129,7 +129,6 @@ return {
 			})
 
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 		end,
 	},
 }
