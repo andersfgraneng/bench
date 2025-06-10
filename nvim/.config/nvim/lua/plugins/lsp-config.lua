@@ -22,7 +22,7 @@ return {
 					"terraformls",
 					"tflint",
 					"dockerls",
---					"gh_actions_ls"
+					"gh_actions_ls",
 					-- frontend tools/languages/frameworks
 					"ts_ls",
 					"astro",
