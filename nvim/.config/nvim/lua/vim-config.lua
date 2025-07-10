@@ -18,3 +18,6 @@ vim.keymap.set("v", "crv", "<Esc><Cmd>lua require('jdtls').extract_variable(true
 vim.keymap.set("n", "crc", "<Cmd>lua require('jdtls').extract_constant()<CR>") -- nnoremap crc <Cmd>lua require('jdtls').extract_constant()<CR>
 vim.keymap.set("v", "crc", "<Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>") -- vnoremap crc <Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>
 vim.keymap.set("v", "crm", "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>") -- vnoremap crm <Esc><Cmd>lua require('jdtls').extract_method(true)<CR>
+
+
+vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
