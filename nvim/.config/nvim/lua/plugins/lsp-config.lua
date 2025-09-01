@@ -11,25 +11,23 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					-- general programming languages/tools
-					"jdtls",
-					"rust_analyzer",
-					"gopls",
-					"lua_ls",
-                    "pyright", -- python
-					"vacuum",
-					"taplo",
+					"jdtls",         -- java
+					"rust_analyzer", -- rust
+					"lua_ls",        -- lua
+                    "pyright",       -- python
+					"vacuum",        -- openapi 3
+					"taplo",         -- toml
 					-- build/infrastructure tools
-					"terraformls",
-					"tflint",
-					"dockerls",
-					"gh_actions_ls",
+					"terraformls",   -- terraform
+					"tflint",        -- terraform
+					"dockerls",      -- docker
+					"gh_actions_ls", -- github actions
 					-- frontend tools/languages/frameworks
-					"ts_ls",
-					"astro",
-					"angularls",
-                    "vue_ls",
-					"tailwindcss",
-					"html",
+					"ts_ls",         -- typescript
+					"astro",         -- astro
+					"angularls",     -- angular
+					"tailwindcss",   -- tailwind
+					"html",          -- html
 				},
 			})
 		end,
@@ -42,9 +40,6 @@ return {
 
 			-- general programming languages/tools
 			lspconfig.rust_analyzer.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.gopls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.lua_ls.setup({
@@ -85,25 +80,12 @@ return {
 			-- frontend tools/languages/frameworks
 			-- for ts remember you need to:
 			-- npm install -g typescript typescript-language-server
-			-- to support vue you also need:
-			-- npm install -g @vue/typescript-plugin
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
-				init_options = {
-					plugins = {
-						{
-							name = "@vue/typescript-plugin",
-							location = vim.fn.stdpath("data")
-								.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
-							languages = { "vue" },
-						},
-					},
-				},
 				filetypes = {
 					"javascript",
 					"typescript",
 					"typescriptreact",
-					"vue",
 				},
 			})
 			lspconfig.astro.setup({

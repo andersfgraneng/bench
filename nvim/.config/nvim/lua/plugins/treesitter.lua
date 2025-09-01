@@ -22,7 +22,6 @@ return {
 					"yaml",
 					"terraform",
 					"hcl",
-					"go",
 					"dockerfile",
 				},
 				sync_install = false,
