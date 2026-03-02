@@ -24,30 +24,30 @@ vim.lsp.enable("angularls")
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = {
-        "lua",
-        "vim",
-        "vimdoc",
-        "html",
-        "javascript",
-        "typescript",
-        "tsx",
-        "angular",
-        "java",
-        "rust",
-        "python",
-        "json",
-        "yaml",
-        "terraform",
-        "hcl",
-        "dockerfile",
-        "hurl",
-        "markdown",
-        "markdown_inline",
-        "diff",
-        "gitcommit",
-    },
-    callback = function()
-        vim.treesitter.start()
-    end,
+	pattern = {
+		"lua",
+		"vim",
+		"vimdoc",
+		"html",
+		"javascript",
+		"typescript",
+		"tsx",
+		"angular",
+		"java",
+		"rust",
+		"python",
+		"json",
+		"yaml",
+		"terraform",
+		"hcl",
+		"dockerfile",
+		"hurl",
+		"markdown",
+		"markdown_inline",
+		"diff",
+		"gitcommit",
+	},
+	callback = function()
+		vim.treesitter.start()
+	end,
 })
