@@ -46,6 +46,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"markdown_inline",
 		"diff",
 		"gitcommit",
+		"http",
 	},
 	callback = function()
 		vim.treesitter.start()
