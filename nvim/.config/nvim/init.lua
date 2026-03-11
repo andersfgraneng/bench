@@ -24,31 +24,51 @@ vim.lsp.enable("angularls")
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = {
-		"lua",
-		"vim",
-		"vimdoc",
-		"html",
-		"javascript",
-		"typescript",
-		"tsx",
-		"angular",
-		"java",
-		"rust",
-		"python",
-		"json",
-		"yaml",
-		"terraform",
-		"hcl",
-		"dockerfile",
-		"hurl",
-		"markdown",
-		"markdown_inline",
-		"diff",
-		"gitcommit",
-		"http",
-	},
-	callback = function()
-		vim.treesitter.start()
-	end,
+    pattern = {
+        "lua",
+        "vim",
+        "vimdoc",
+        "html",
+        "javascript",
+        "typescript",
+        "tsx",
+        "angular",
+        "java",
+        "rust",
+        "python",
+        "json",
+        "yaml",
+        "terraform",
+        "hcl",
+        "dockerfile",
+        "hurl",
+        "markdown",
+        "markdown_inline",
+        "diff",
+        "gitcommit",
+        "http",
+    },
+    callback = function()
+        vim.treesitter.start()
+    end,
+})
+
+vim.filetype.add({
+    -- Detect by file extension (simple string match)
+    extension = {
+        mdx = "mdx",
+        conf = "conf",
+    },
+    -- Detect by exact filename (simple string match)
+    filename = {
+        [".env"] = "dotenv",
+    },
+    -- Detect by Lua regex pattern (using '%' as an escape)
+    pattern = {
+        -- Matches filenames like ".env.example", ".env.local", etc.
+        ["%.env%.[%w_.-]+"] = "dotenv",
+        -- Matches files in any 'zfunctions' directory as 'zsh' filetype
+        [".*/zfunctions/.*"] = "zsh",
+        [".*/.github/workflows/.*%.yml"] = "yaml.ghaction",
+    },
 })
