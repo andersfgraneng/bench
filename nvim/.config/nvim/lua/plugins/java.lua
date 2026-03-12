@@ -1,7 +1,7 @@
 return {
-  "mfussenegger/nvim-jdtls",
-  dependencies = {
-    "mfussenegger/nvim-dap",
-    "neovim/nvim-lspconfig",
-  },
+	"mfussenegger/nvim-jdtls",
+	dependencies = {
+		"mfussenegger/nvim-dap",
+		"neovim/nvim-lspconfig",
+	},
 }

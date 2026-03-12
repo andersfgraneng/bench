@@ -58,6 +58,7 @@ brew install docker-compose
 brew install docker-credential-helper
 brew install colima
 brew install ijhttp
+brew install jdtls
 brew install --cask iTerm2
 brew install --cask ghostty
 brew install --cask nikitabobko/tap/aerospace
