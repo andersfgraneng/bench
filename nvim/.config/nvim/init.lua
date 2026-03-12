@@ -7,6 +7,7 @@ vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")
 vim.lsp.enable("vacuum")
 vim.lsp.enable("taplo")
+vim.lsp.enable("jdtls")
 -- build/infrastructure tools
 vim.lsp.enable("terraformls")
 vim.lsp.enable("tflint")
