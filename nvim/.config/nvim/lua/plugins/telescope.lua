@@ -1,3 +1,16 @@
+vim.pack.add({
+	-- telescope
+	{
+		src = "https://github.com/nvim-telescope/telescope.nvim",
+		tag = "v0.2.1",
+	},
+	"https://github.com/nvim-telescope/telescope-ui-select.nvim",
+
+	-- dependencies --
+	-- dependency for telescope
+	"https://github.com/nvim-lua/plenary.nvim",
+})
+
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
