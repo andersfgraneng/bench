@@ -1,5 +1,5 @@
 require("vim-config")
-require("config.lazy")
+require("plugins")
 
 -- general programming languages/tools
 vim.lsp.enable("rust_analyzer")
