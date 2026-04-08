@@ -1,5 +1,6 @@
 require("plugins.completions")
 require("plugins.formatting")
+require("plugins.git")
 require("plugins.lsp")
 require("plugins.telescope")
 require("plugins.ui")

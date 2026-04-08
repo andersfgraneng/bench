@@ -1,18 +1,8 @@
-return {
-	{
-		"f-person/git-blame.nvim",
-	},
-	{
-		"sindrets/diffview.nvim",
-	},
-	{
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
-			vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
-		end,
-	},
-	{
-		"tpope/vim-fugitive",
-	},
-}
+vim.pack.add({
+	"https://github.com/f-person/git-blame.nvim",
+	"https://github.com/sindrets/diffview.nvim",
+	"https://github.com/lewis6991/gitsigns.nvim",
+	"https://github.com/tpope/vim-fugitive",
+})
+
+vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
