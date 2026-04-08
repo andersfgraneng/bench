@@ -4,6 +4,10 @@ vim.pack.add({
 	-- mason
 	"https://github.com/williamboman/mason.nvim",
 	"https://github.com/williamboman/mason-lspconfig.nvim",
+	-- treesitter
+	"https://github.com/nvim-treesitter/nvim-treesitter",
+	-- java
+	"https://github.com/nvim-java/nvim-java",
 })
 
 require("mason").setup()
@@ -50,31 +54,35 @@ vim.lsp.enable("angularls")
 
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
+local languages = {
+	"lua",
+	"vim",
+	"vimdoc",
+	"html",
+	"javascript",
+	"typescript",
+	"tsx",
+	"angular",
+	"java",
+	"rust",
+	"python",
+	"json",
+	"yaml",
+	"terraform",
+	"hcl",
+	"dockerfile",
+	"hurl",
+	"markdown",
+	"markdown_inline",
+	"diff",
+	"gitcommit",
+	"http",
+}
+
+require("nvim-treesitter").install(languages)
+
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = {
-		"lua",
-		"vim",
-		"vimdoc",
-		"html",
-		"javascript",
-		"typescript",
-		"tsx",
-		"angular",
-		"java",
-		"rust",
-		"python",
-		"json",
-		"yaml",
-		"terraform",
-		"hcl",
-		"dockerfile",
-		"hurl",
-		"markdown",
-		"markdown_inline",
-		"diff",
-		"gitcommit",
-		"http",
-	},
+	pattern = languages,
 	callback = function()
 		vim.treesitter.start()
 	end,
