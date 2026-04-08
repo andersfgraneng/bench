@@ -1,3 +1,4 @@
+require("plugins.codecompanion")
 require("plugins.completions")
 require("plugins.formatting")
 require("plugins.git")
