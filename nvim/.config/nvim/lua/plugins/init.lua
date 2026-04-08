@@ -1,3 +1,4 @@
+require("plugins.completions")
 require("plugins.formatting")
 require("plugins.lsp")
 require("plugins.telescope")
