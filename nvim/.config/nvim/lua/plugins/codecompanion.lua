@@ -1,14 +1,11 @@
--- lazy.nvim
-return {
-  "olimorris/codecompanion.nvim",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-treesitter/nvim-treesitter",
-  },
+vim.pack.add({
+	"https://github.com/olimorris/codecompanion.nvim",
+	"https://github.com/nvim-lua/plenary.nvim",
+	"https://github.com/nvim-treesitter/nvim-treesitter",
+})
+
+require("codecompanion").setup({
   opts = {
-    -- NOTE: The log_level is in `opts.opts`
-    opts = {
-      log_level = "DEBUG", -- or "TRACE"
-    },
-  },
-}
+    log_level = "DEBUG", -- or "TRACE"
+  }
+})

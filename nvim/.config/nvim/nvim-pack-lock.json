@@ -4,6 +4,10 @@
       "rev": "a327b19a419347084074cce77f6cd074f54705ac",
       "src": "https://github.com/saghen/blink.cmp"
     },
+    "codecompanion.nvim": {
+      "rev": "7d7957c26d33a97085d3a0c82eeb0147a0f51314",
+      "src": "https://github.com/olimorris/codecompanion.nvim"
+    },
     "conform.nvim": {
       "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
       "src": "https://github.com/stevearc/conform.nvim"
