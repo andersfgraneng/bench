@@ -2,7 +2,7 @@
 
 if [[ "$OSTYPE" =~ darwin* ]]; then
   echo "OS is: $OSTYPE"
-  ./mac/setup.sh
+  ./os/mac/setup.sh
   stow aerospace
   stow ghostty
   stow jetbrains
@@ -12,7 +12,7 @@ elif [[ "$OSTYPE" =~ linux-gnu ]]; then
   if [[ -f /etc/os-release ]]; then
     . /etc/os-release
     if [[ "$NAME" == "Arch Linux" ]]; then
-      ./archlinux/setup.sh
+      ./os/archlinux/setup.sh
     fi
   fi
 fi
