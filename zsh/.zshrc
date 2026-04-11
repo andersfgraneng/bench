@@ -147,3 +147,8 @@ ZSH_HIGHLIGHT_STYLES[global-alias]=fg=#FFA066
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=#C0A36E #boatYellow2
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=#C0A36E 
 ZSH_HIGHLIGHT_STYLES[path]=fg=#98BB6C #Green
+
+if [ -d "$HOME/workbench/" ]; then
+#    zsh "$HOME/workbench/setup.sh"
+    export PATH="$PATH:$HOME/workbench/bin/"
+fi
