@@ -50,6 +50,8 @@ brew install fd
 brew install jq
 brew install bat
 brew install tree
+brew install tree-sitter
+brew install tree-sitter-cli
 brew install fzf
 brew install ripgrep
 brew install pyenv
