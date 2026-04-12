@@ -18,9 +18,10 @@ sudo apt install fd
 sudo apt install jq
 sudo apt install bat
 sudo apt install tree
+sudo apt install tree-sitter
+sudo apt install tree-sitter-cli
 sudo apt install fzf
 sudo apt install ripgrep
-#sudo snap install terraform
 
 # install programming languages tooling
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
