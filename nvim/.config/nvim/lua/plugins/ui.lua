@@ -24,7 +24,7 @@ vim.pack.add({
 
 -- colorscheme
 require("kanagawa")
-vim.cmd.colorscheme("kanagawa-wave")
+vim.cmd.colorscheme("kanagawa-lotus")
 
 -- file explorer
 require("neo-tree").setup({

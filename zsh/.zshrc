@@ -140,13 +140,13 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffffff,bold,underline"
 # See here for more highlighting options 
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md
 # Catppuccin colors: https://github.com/catppuccin/catppuccin
-ZSH_HIGHLIGHT_STYLES[command]=fg=#FFA066 #surimiOrange
-ZSH_HIGHLIGHT_STYLES[builtin]=fg=#FFA066 
-ZSH_HIGHLIGHT_STYLES[alias]=fg=#FFA066 
-ZSH_HIGHLIGHT_STYLES[global-alias]=fg=#FFA066 
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=#C0A36E #boatYellow2
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=#C0A36E 
-ZSH_HIGHLIGHT_STYLES[path]=fg=#98BB6C #Green
+#ZSH_HIGHLIGHT_STYLES[command]=fg=#FFA066 #surimiOrange
+#ZSH_HIGHLIGHT_STYLES[builtin]=fg=#FFA066 
+#ZSH_HIGHLIGHT_STYLES[alias]=fg=#FFA066 
+#ZSH_HIGHLIGHT_STYLES[global-alias]=fg=#FFA066 
+#ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=#C0A36E #boatYellow2
+#ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=#C0A36E 
+#ZSH_HIGHLIGHT_STYLES[path]=fg=#98BB6C #Green
 
 if [ -d "$HOME/workbench/" ]; then
 #    zsh "$HOME/workbench/setup.sh"
