@@ -6,8 +6,6 @@ vim.pack.add({
 	"https://github.com/williamboman/mason-lspconfig.nvim",
 	-- treesitter
 	"https://github.com/nvim-treesitter/nvim-treesitter",
-	-- java
-	"https://github.com/nvim-java/nvim-java",
 })
 
 require("mason").setup()
@@ -15,6 +13,8 @@ require("mason-lspconfig").setup({
 	ensure_installed = {
 		-- general programming languages/tools
 		"jdtls", -- java
+		"java-debug-adapter", -- java dap
+		"java-test", -- java test
 		"rust_analyzer", -- rust
 		"lua_ls", -- lua
 		"taplo", -- toml
@@ -37,7 +37,6 @@ vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")
 vim.lsp.enable("vacuum")
 vim.lsp.enable("taplo")
-vim.lsp.enable("jdtls")
 -- build/infrastructure tools
 vim.lsp.enable("terraformls")
 vim.lsp.enable("tflint")

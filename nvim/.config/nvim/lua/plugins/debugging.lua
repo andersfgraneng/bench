@@ -1,31 +1,28 @@
-return {
-	"mfussenegger/nvim-dap",
-	dependencies = {
-		"rcarriga/nvim-dap-ui",
-		"nvim-neotest/nvim-nio",
-		"julianolf/nvim-dap-lldb",
-	},
-	config = function()
-		local dap = require("dap")
-		local dapui = require("dapui")
+vim.pack.add({
+	"https://github.com/mfussenegger/nvim-dap",
+	"https://github.com/rcarriga/nvim-dap-ui",
+	"https://github.com/nvim-neotest/nvim-nio",
+	"https://github.com/julianolf/nvim-dap-lldb",
+})
 
-    require("dapui").setup()
-		require("dap-lldb").setup()
+local dap = require("dap")
+local dapui = require("dapui")
 
-		dap.listeners.before.attach.dapui_config = function()
-			dapui.open()
-		end
-		dap.listeners.before.launch.dapui_config = function()
-			dapui.open()
-		end
-		dap.listeners.before.event_terminated.dapui_config = function()
-			dapui.close()
-		end
-		dap.listeners.before.event_exited.dapui_config = function()
-			dapui.close()
-		end
+require("dapui").setup()
+require("dap-lldb").setup()
 
-		vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, {})
-		vim.keymap.set("n", "<Leader>dc", dap.continue, {})
-	end,
-}
+dap.listeners.before.attach.dapui_config = function()
+	dapui.open()
+end
+dap.listeners.before.launch.dapui_config = function()
+	dapui.open()
+end
+dap.listeners.before.event_terminated.dapui_config = function()
+	dapui.close()
+end
+dap.listeners.before.event_exited.dapui_config = function()
+	dapui.close()
+end
+
+vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, {})
+vim.keymap.set("n", "<Leader>dc", dap.continue, {})
