@@ -53,3 +53,28 @@ vim.api.nvim_create_autocmd("FileType", {
 		require("jdtls").start_or_attach(make_jdtls_config())
 	end,
 })
+
+require("dap").configurations.java = {
+	{
+		type = "java",
+		request = "launch",
+		name = "Spring Boot",
+		mainClass = "${file}",
+		vmArgs = "-Dspring.profiles.active=local",
+	},
+	{
+		type = "java",
+		request = "attach",
+		name = "Spring Boot (attach :8000)",
+		hostName = "localhost",
+		port = 8000,
+	},
+	-- Quarkus dev mode opens JDWP on 5005 by default (mvnw quarkus:dev / gradle quarkusDev)
+	{
+		type = "java",
+		request = "attach",
+		name = "Quarkus Dev (attach :5005)",
+		hostName = "localhost",
+		port = 5005,
+	},
+}
