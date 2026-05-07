@@ -50,53 +50,30 @@ brew install fd
 brew install jq
 brew install bat
 brew install tree
+brew install zip
+brew install unzip
 brew install tree-sitter
 brew install tree-sitter-cli
 brew install fzf
 brew install ripgrep
-brew install pyenv
 brew install docker
 brew install docker-compose
 brew install docker-credential-helper
 brew install colima
-brew install ijhttp
-brew install --cask iTerm2
 brew install --cask ghostty
-brew install --cask nikitabobko/tap/aerospace
-brew install --cask arc
-brew install --cask chatgpt
 brew install --cask obsidian
-brew install --cask raycast
 brew install --cask discord
-brew install --cask google-cloud-sdk
-brew tap FelixKratz/formulae
-brew install borders
-brew tap hashicorp/tap
-brew install hashicorp/tap/terraform
 
 # sdkman needs zip and unzip, ensures latest versions
-brew install zip
-brew install unzip
 
 # install programming languages tooling
 
-brew install go
 brew install rust
-
-if [[ ! -f "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
-    curl -s "https://get.sdkman.io" | bash
-else
-    echo "sdkman already installed."
-fi
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
 
 if [[ ! -d "$HOME/.nvm" ]]; then
-    PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash'
+    PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash'
 else
     echo "nvm already installed."
-fi
-
-if [[ ! -d "$HOME/.pyenv" ]]; then
-    curl -fsSL https://pyenv.run | bash
-else
-    echo "pyenv already installed."
 fi
