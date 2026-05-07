@@ -4,7 +4,6 @@ if [[ "$OSTYPE" =~ darwin* ]]; then
   echo "OS is: $OSTYPE"
   ./os/mac/setup.sh
   stow ghostty
-  stow jetbrains
 elif [[ "$OSTYPE" =~ linux-gnu ]]; then
   echo "OS is: $OSTYPE"
 
