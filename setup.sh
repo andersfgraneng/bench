@@ -3,7 +3,6 @@
 if [[ "$OSTYPE" =~ darwin* ]]; then
   echo "OS is: $OSTYPE"
   ./os/mac/setup.sh
-  stow aerospace
   stow ghostty
   stow jetbrains
 elif [[ "$OSTYPE" =~ linux-gnu ]]; then
