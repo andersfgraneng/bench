@@ -64,8 +64,6 @@ brew install --cask ghostty
 brew install --cask obsidian
 brew install --cask discord
 
-# sdkman needs zip and unzip, ensures latest versions
-
 # install programming languages tooling
 
 brew install rust
