@@ -69,11 +69,7 @@ brew install --cask discord
 # install programming languages tooling
 
 brew install rust
+brew install uv
+brew install fnm
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
-
-if [[ ! -d "$HOME/.nvm" ]]; then
-    PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash'
-else
-    echo "nvm already installed."
-fi
