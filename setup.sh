@@ -27,3 +27,7 @@ stow zsh
 
 echo "Install tpm plugins"
 bash "$HOME/.tmux/plugins/tpm/bin/install_plugins"
+
+if [ -d "$HOME/workbench/" ]; then
+    . "$HOME/workbench/install.sh"
+fi
