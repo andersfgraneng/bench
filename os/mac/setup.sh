@@ -60,9 +60,12 @@ brew install docker
 brew install docker-compose
 brew install docker-credential-helper
 brew install colima
+brew install 1password-cli
+brew install --cask 1password
 brew install --cask ghostty
 brew install --cask obsidian
 brew install --cask discord
+brew install --cask zed
 
 # install programming languages tooling
 
