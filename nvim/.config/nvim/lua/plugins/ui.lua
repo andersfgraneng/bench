@@ -1,7 +1,7 @@
 vim.pack.add({
 	-- ui --
 	-- theme
-	"https://github.com/rebelot/kanagawa.nvim",
+    { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
 	-- file explorer
 	{ src = "https://github.com/nvim-neo-tree/neo-tree.nvim", branch = "v3.x" },
 	"https://github.com/nvim-lua/plenary.nvim",
@@ -23,8 +23,8 @@ vim.pack.add({
 })
 
 -- colorscheme
-require("kanagawa")
-vim.cmd.colorscheme("kanagawa-wave")
+require("catppuccin").setup({ flavour = "auto" })
+vim.cmd.colorscheme "catppuccin-nvim"
 
 -- file explorer
 require("neo-tree").setup({
