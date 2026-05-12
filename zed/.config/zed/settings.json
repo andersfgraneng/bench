@@ -7,40 +7,45 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
   "cli_default_open_behavior": "existing_window",
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "agent": {
     "dock": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "git": {
     "enable_status": true,
-    "disable_git": false
+    "disable_git": false,
   },
   "terminal": {
     "dock": "right",
     "shell": "system",
-    "font_family": "BlexMono Nerd Font Mono"
+    "font_family": "BlexMono Nerd Font Mono",
   },
   "features": {
-    "copilot": false
+    "copilot": false,
   },
   "theme": "Catppuccin Mocha",
   "auto_install_extensions": {
     "dockerfile": true,
-    "html": true
+    "html": true,
   },
   "languages": {
     "Python": {
@@ -49,9 +54,9 @@
         // other registered language servers (ruff, pylsp, pyright).
         "ty",
         "!basedpyright",
-        "..."
-      ]
-    }
+        "...",
+      ],
+    },
   },
   "feature_flags": {
     "tabular-data-preview": "on",
@@ -60,9 +65,9 @@
   "base_keymap": "VSCode",
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "vim_mode": true,
   "ui_font_size": 16,
-  "buffer_font_size": 16
+  "buffer_font_size": 16,
 }
