@@ -112,40 +112,23 @@ fi
 
 export HOMEBREW_NO_ANALYTICS=1
 
-export PATH="$PATH:$HOME/.pyenv/bin"
-export PATH="$PATH:$HOME/.poetry/bin"
-export PATH="$PATH:$HOME/.local/bin" # pipx
 export PATH="$PATH:$HOME/nvim-macos/bin"
-export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
 eval "$(starship init zsh)"
-
-export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux/tmuxifier/layouts"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffffff,bold,underline"
 
 # Add highlight style for command flags (-f|--flag).
 # named color values: red,green,blue,yellow,cyan,magenta,white,black
-# See here for more highlighting options 
+# See here for more highlighting options
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md
 # Catppuccin colors: https://github.com/catppuccin/catppuccin
 ZSH_HIGHLIGHT_STYLES[command]=fg=#FFA066 #surimiOrange
-ZSH_HIGHLIGHT_STYLES[builtin]=fg=#FFA066 
-ZSH_HIGHLIGHT_STYLES[alias]=fg=#FFA066 
-ZSH_HIGHLIGHT_STYLES[global-alias]=fg=#FFA066 
+ZSH_HIGHLIGHT_STYLES[builtin]=fg=#FFA066
+ZSH_HIGHLIGHT_STYLES[alias]=fg=#FFA066
+ZSH_HIGHLIGHT_STYLES[global-alias]=fg=#FFA066
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=#C0A36E #boatYellow2
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=#C0A36E 
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=#C0A36E
 ZSH_HIGHLIGHT_STYLES[path]=fg=#98BB6C #Green
 
 if [ -d "$HOME/workbench/" ]; then
