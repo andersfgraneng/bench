@@ -18,6 +18,7 @@ fi
 ./tmux/setup.sh
 ./zsh/setup.sh
 
+stow mise
 stow nvim
 stow zed
 stow starship
