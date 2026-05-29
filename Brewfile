@@ -1,4 +1,5 @@
 brew "git"
+brew "worktrunk"
 brew "tmux"
 brew "neovim"
 brew "starship"
