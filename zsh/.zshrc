@@ -115,6 +115,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export PATH="$PATH:$HOME/nvim-macos/bin"
 
 eval "$(starship init zsh)"
+eval "$(/opt/homebrew/bin/mise activate zsh)"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffffff,bold,underline"
 
