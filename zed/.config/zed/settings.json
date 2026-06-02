@@ -36,11 +36,13 @@
   },
   "terminal": {
     "dock": "right",
-    "shell": "system",
     "font_family": "BlexMono Nerd Font Mono",
-  },
-  "features": {
-    "copilot": false,
+    "shell": {
+      "with_arguments": {
+        "program": "/bin/zsh", // or path to your preferred shell
+        "args": ["-c", "tmux new-session -A -s \"$(basename \"$PWD\")\""],
+      },
+    },
   },
   "theme": "Catppuccin Mocha",
   "auto_install_extensions": {

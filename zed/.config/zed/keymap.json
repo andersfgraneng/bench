@@ -1,25 +1,29 @@
 [
   {
     "bindings": {
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
+      "ctrl-alt-h": "workspace::ActivatePaneLeft",
+      "ctrl-alt-j": "workspace::ActivatePaneDown",
+      "ctrl-alt-k": "workspace::ActivatePaneUp",
+      "ctrl-alt-l": "workspace::ActivatePaneRight",
       // ... or other keybindings
-    }
+    },
   },
   {
     "context": "vim_mode == normal",
     "bindings": {
-      "space f f": "file_finder::Toggle",
+      "space f f": [
+        "task::Spawn",
+        { "task_name": "Television File Finder", "reveal_target": "center" },
+      ],
       "space f g": "pane::DeploySearch",
-      "space q": "pane::CloseActiveItem"
-    }
+      "space q": "pane::CloseActiveItem",
+      "space g f": "editor::Format",
+    },
   },
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
-      "space g f": "editor::Format"
-    }
-  }
+      "space g f": "editor::Format",
+    },
+  },
 ]

@@ -18,6 +18,7 @@ brew "fzf"
 brew "ripgrep"
 brew "mise"
 brew "uv"
+brew "television"
 
 cask "1password"
 cask "1password-cli"
