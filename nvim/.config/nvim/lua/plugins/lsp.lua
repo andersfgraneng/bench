@@ -8,30 +8,26 @@ vim.pack.add({
 	"https://github.com/nvim-treesitter/nvim-treesitter",
 })
 
+local servers = {
+	"rust_analyzer", -- rust
+	"ts_ls", -- typescript
+	"ty", -- python
+	"lua_ls", -- lua
+	"taplo", -- toml
+	"dockerls", -- docker
+	"gh_actions_ls", -- github actions
+	"html", -- html
+}
+
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = {
-		"rust_analyzer", -- rust
-		"ts_ls", -- typescript
-		"ty", -- python
-		"lua_ls", -- lua
-		"taplo", -- toml
-		"dockerls", -- docker
-		"gh_actions_ls", -- github actions
-		"html", -- html
-	},
+	ensure_installed = servers,
+	automatic_installation = true,
 })
 
--- for ts remember you need to:
--- npm install -g typescript typescript-language-server
-vim.lsp.enable("rust_analyzer")
-vim.lsp.enable("ts_ls")
-vim.lsp.enable("ty")
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("taplo")
-vim.lsp.enable("dockerls")
-vim.lsp.enable("gh_actions_ls")
-vim.lsp.enable("html")
+for _, server in ipairs(servers) do
+	vim.lsp.enable(server)
+end
 
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
