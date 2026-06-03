@@ -1,5 +1,6 @@
 require("plugins.codecompanion")
 require("plugins.completions")
+require("plugins.debugging")
 require("plugins.formatting")
 require("plugins.git")
 require("plugins.lsp")
