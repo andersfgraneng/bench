@@ -7,9 +7,7 @@ vim.pack.add({
 	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 	-- treesitter
 	"https://github.com/nvim-treesitter/nvim-treesitter",
-	-- dap (needed for jdtls debug integration)
-	"https://github.com/mfussenegger/nvim-dap",
-	-- java
+	-- java (debug integration provided by nvim-dap loaded in plugins/debugging.lua)
 	"https://github.com/mfussenegger/nvim-jdtls",
 })
 
