@@ -39,7 +39,3 @@ command -v brew >/dev/null 2>&1 || { \
 
 brew update
 brew bundle --file="$(dirname "$0")/Brewfile"
-
-if [ -d "$HOME/workbench/" ]; then
-    . "$HOME/workbench/install.sh"
-fi
