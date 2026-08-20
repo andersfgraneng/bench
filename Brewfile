@@ -1,6 +1,7 @@
 brew "git"
 brew "worktrunk"
 brew "tmux"
+brew "herdr"
 brew "neovim"
 brew "starship"
 brew "hurl"
@@ -19,6 +20,8 @@ brew "ripgrep"
 brew "mise"
 brew "uv"
 brew "television"
+
+# Dependencies for building rdkafka
 brew "librdkafka"
 brew "pkg-config"
 brew "openssl"
