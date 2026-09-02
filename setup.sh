@@ -4,7 +4,7 @@
 ./zsh/setup.sh
 
 stow ghostty
-stow herdr
+stow jetbrains
 stow mise
 stow nvim
 stow zed
