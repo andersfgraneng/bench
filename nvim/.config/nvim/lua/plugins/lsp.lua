@@ -7,8 +7,6 @@ vim.pack.add({
 	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 	-- treesitter
 	"https://github.com/nvim-treesitter/nvim-treesitter",
-	-- java (debug integration provided by nvim-dap loaded in plugins/debugging.lua)
-	"https://github.com/mfussenegger/nvim-jdtls",
 })
 
 local servers = {
@@ -24,17 +22,8 @@ local servers = {
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-	-- jdtls is installed via mason but started per-buffer by nvim-jdtls (see ftplugin/java.lua)
-	ensure_installed = vim.list_extend(vim.list_slice(servers), { "jdtls" }),
+	ensure_installed = servers,
 	automatic_installation = true,
-})
-
--- Mason packages that aren't LSP servers (debug adapters, test runners)
-require("mason-tool-installer").setup({
-	ensure_installed = {
-		"java-debug-adapter",
-		"java-test",
-	},
 })
 
 for _, server in ipairs(servers) do
@@ -50,7 +39,6 @@ local languages = {
 	"vim",
 	"vimdoc",
 	"html",
-	"java",
 	"javascript",
 	"typescript",
 	"tsx",
