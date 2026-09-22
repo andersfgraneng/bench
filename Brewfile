@@ -20,6 +20,7 @@ brew "ripgrep"
 brew "mise"
 brew "uv"
 brew "television"
+brew "gh"
 
 # Dependencies for building rdkafka
 brew "librdkafka"
