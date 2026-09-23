@@ -21,6 +21,7 @@ brew "mise"
 brew "uv"
 brew "television"
 brew "gh"
+brew "pi-coding-agent"
 
 # Dependencies for building rdkafka
 brew "librdkafka"
